@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  BTGPactualMobileChallenger
 //
 //  Created by Julio Cezar Kenji Miyahira on 13/08/21.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol MainViewProtocol {
+    
+}
+
+class MainViewController: UIViewController, MainViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
