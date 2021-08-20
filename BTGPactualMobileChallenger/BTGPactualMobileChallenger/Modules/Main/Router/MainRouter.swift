@@ -10,19 +10,33 @@ import UIKit
 typealias EntryPoint = UIViewController & MainViewProtocol
 
 protocol MainRouterProtocol {
-    var view: EntryPoint? { get set}
+    var entry: EntryPoint? { get set}
     static func start() -> MainRouterProtocol
 }
 
 class MainRouter: MainRouterProtocol {
 
-    var view: EntryPoint?
+    var entry: EntryPoint?
     
     static func start() -> MainRouterProtocol {
+    
         let router = MainRouter()
-        
+    
+        // VIP
         let view = MainViewController()
-        router.view = view
+        let presenter = MainPresenter()
+        let iteractor = MainIteractor()
+        
+        
+        view.presenter = presenter
+        
+        iteractor.presenter = presenter
+        
+        presenter.router = router
+        presenter.view = view
+        presenter.iteractor = iteractor
+        
+        router.entry = view
         
         return router
     }
