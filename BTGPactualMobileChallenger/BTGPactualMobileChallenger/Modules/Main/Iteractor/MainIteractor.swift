@@ -17,6 +17,8 @@ class MainIteractor: MainIteractorProtocol {
     var presenter: MainPresenter?
    
     func getCurrencies() {
-        print("Oi")
+        APIService.getCurrenciesAvaliable { result in
+            print("Oi")
+        }
     }
 }

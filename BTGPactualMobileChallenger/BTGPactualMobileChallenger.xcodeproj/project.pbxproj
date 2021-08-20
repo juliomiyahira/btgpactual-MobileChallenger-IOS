@@ -128,7 +128,7 @@
 		28381EA726C7068F00B10B61 /* BTGPactualMobileChallenger */ = {
 			isa = PBXGroup;
 			children = (
-				28381EE726CFDF0F00B10B61 /* Common */,
+				28381EE726CFDF0F00B10B61 /* Network */,
 				28381ED926C707E100B10B61 /* Modules */,
 				28381ED826C706F400B10B61 /* AppDelegate */,
 				28381EB126C7069200B10B61 /* Assets.xcassets */,
@@ -226,13 +226,13 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		28381EE726CFDF0F00B10B61 /* Common */ = {
+		28381EE726CFDF0F00B10B61 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				28381EF226CFEB0100B10B61 /* Service */,
 				28381EE826CFDF1400B10B61 /* ApiRouter */,
 			);
-			path = Common;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		28381EE826CFDF1400B10B61 /* ApiRouter */ = {
