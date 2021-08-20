@@ -10,19 +10,21 @@ import Alamofire
 
 class APIService {
     
-    public static func getCurrenciesAvaliable(completionHandler: @escaping(Result<[Currency], Error>) -> Void) {
-        let configuration = URLSessionConfiguration.af.default
-        let session = Session(configuration: configuration)
-        session.request(APIRouter.getList).responseData { response in
+    public static func getCurrenciesAvaliable(completionHandler: @escaping(Result<Currency, Error>) -> Void) {
+        AF.request(APIRouter.getList).responseData { response in
             switch response.result  {
                 case .success(let data):
-                    print(data)
+                    do {
+                        let currentList = try JSONDecoder().decode(Currency.self, from: data)
+                        completionHandler(.success(currentList))
+                    }catch {
+                        completionHandler(.failure(error))
+                    }
                     break
                 case .failure(let error):
-                    print(error)
+                    completionHandler(.failure(error))
                     break
             }
         }
-        completionHandler(.success([]))
     }
 }

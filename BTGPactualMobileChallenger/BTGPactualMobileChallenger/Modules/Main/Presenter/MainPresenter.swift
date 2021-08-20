@@ -12,7 +12,8 @@ protocol MainPresenterProtocol {
     var iteractor: MainIteractorProtocol? { get set }
     var view: MainViewProtocol? { get set }
     func getCurrencies()
-    func iteractorDidFetchCurrency(with result: Result<[Currency], Error>)
+    func successGetcurrencies(currency: Currency)
+    func errorGetcurrencies(error: Error)
 }
 
 class MainPresenter: MainPresenterProtocol {
@@ -27,6 +28,11 @@ class MainPresenter: MainPresenterProtocol {
         self.iteractor?.getCurrencies()
     }
     
-    func iteractorDidFetchCurrency(with result: Result<[Currency], Error>) {
+    func successGetcurrencies(currency: Currency) {
+        self.view?.update(with: currency)
+    }
+    
+    func errorGetcurrencies(error: Error) {
+        self.view?.update(with: error.localizedDescription)
     }
 }

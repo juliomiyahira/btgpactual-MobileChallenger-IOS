@@ -18,7 +18,12 @@ class MainIteractor: MainIteractorProtocol {
    
     func getCurrencies() {
         APIService.getCurrenciesAvaliable { result in
-            print("Oi")
+            switch result {
+                case .success(let currency):
+                    self.presenter?.successGetcurrencies(currency: currency)
+                case .failure(let error):
+                    self.presenter?.errorGetcurrencies(error: error)
+            }
         }
     }
 }

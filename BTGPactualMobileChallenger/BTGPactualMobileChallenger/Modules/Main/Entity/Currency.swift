@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Currency {
-    
+struct Currency: Codable {
+    let success: Bool?
+    let currencies: [String: String]
 }
