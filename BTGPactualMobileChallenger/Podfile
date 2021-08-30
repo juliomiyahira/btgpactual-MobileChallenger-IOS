@@ -5,12 +5,15 @@ target 'BTGPactualMobileChallenger' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire', '~> 5.4'
+  pod 'SnapKit', '~> 5.0.0'
 
   # Pods for BTGPactualMobileChallenger
 
   target 'BTGPactualMobileChallengerTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Nimble-Snapshots'
   end
 
   target 'BTGPactualMobileChallengerUITests' do

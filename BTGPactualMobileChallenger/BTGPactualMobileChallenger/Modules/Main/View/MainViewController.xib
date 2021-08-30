@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="BTGPactualMobileChallenger" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="uWh-I7-cf5" id="03e-2r-ObW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,21 +18,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OIII" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-aq-1ix">
-                    <rect key="frame" x="169" y="438" width="26" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uWh-I7-cf5">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="linkColor"/>
-            <point key="canvasLocation" x="43" y="95"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uWh-I7-cf5" secondAttribute="bottom" id="BTV-vt-vLU"/>
+                <constraint firstItem="uWh-I7-cf5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QZZ-1J-sNe"/>
+                <constraint firstAttribute="trailing" secondItem="uWh-I7-cf5" secondAttribute="trailing" id="nOt-Gr-Qki"/>
+                <constraint firstItem="uWh-I7-cf5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ndN-wJ-ZKc"/>
+            </constraints>
+            <point key="canvasLocation" x="42.028985507246382" y="94.419642857142847"/>
         </view>
     </objects>
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

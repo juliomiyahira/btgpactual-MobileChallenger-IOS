@@ -7,7 +7,25 @@
 		<key>BTGPactualMobileChallenger.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>9</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>28381EA426C7068F00B10B61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28381EBA26C7069200B10B61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28381EC526C7069200B10B61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
