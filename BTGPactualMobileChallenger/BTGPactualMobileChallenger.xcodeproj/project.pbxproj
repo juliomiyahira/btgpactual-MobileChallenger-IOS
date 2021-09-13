@@ -16,17 +16,19 @@
 		28381EC026C7069200B10B61 /* BTGPactualMobileChallengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381EBF26C7069200B10B61 /* BTGPactualMobileChallengerTests.swift */; };
 		28381ECB26C7069200B10B61 /* BTGPactualMobileChallengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381ECA26C7069200B10B61 /* BTGPactualMobileChallengerUITests.swift */; };
 		28381EE326C7087400B10B61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381EE126C7087400B10B61 /* MainViewController.swift */; };
-		28381EE426C7087400B10B61 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28381EE226C7087400B10B61 /* MainViewController.xib */; };
 		28381EE626C708B300B10B61 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381EE526C708B300B10B61 /* MainRouter.swift */; };
 		28381EEA26CFDFCD00B10B61 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381EE926CFDFCD00B10B61 /* MainPresenter.swift */; };
 		28381EEC26CFE04200B10B61 /* MainIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381EEB26CFE04200B10B61 /* MainIteractor.swift */; };
 		28381EEF26CFE38A00B10B61 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381EEE26CFE38A00B10B61 /* Currency.swift */; };
 		28381EF126CFEA7400B10B61 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381EF026CFEA7400B10B61 /* APIRouter.swift */; };
 		28381EF426CFEB3400B10B61 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28381EF326CFEB3400B10B61 /* APIService.swift */; };
-		284EBBDE26DD5011002BB88B /* DropDownComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284EBBDD26DD5011002BB88B /* DropDownComponentView.swift */; };
+		284A898C26EF834A00FB88D5 /* TargetContainerComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A898B26EF834A00FB88D5 /* TargetContainerComponentView.swift */; };
+		284A898E26EF8F6B00FB88D5 /* OrigimContainerComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A898D26EF8F6B00FB88D5 /* OrigimContainerComponentView.swift */; };
+		284A899026EF980D00FB88D5 /* BtgLogoContainerComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A898F26EF980D00FB88D5 /* BtgLogoContainerComponentView.swift */; };
+		284C03E226DEC8EB009B6221 /* MainViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C03E126DEC8EB009B6221 /* MainViewControllerScreen.swift */; };
+		284C03E426DECA85009B6221 /* MainViewControllerScreenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C03E326DECA85009B6221 /* MainViewControllerScreenSpec.swift */; };
+		284EBBDE26DD5011002BB88B /* ButtomContainerComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284EBBDD26DD5011002BB88B /* ButtomContainerComponentView.swift */; };
 		284EBBE026DD5249002BB88B /* DropDownComponentViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284EBBDF26DD5249002BB88B /* DropDownComponentViewSpec.swift */; };
-		2866BC5F26D921830042A8F0 /* MainHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866BC5D26D921830042A8F0 /* MainHeaderTableViewCell.swift */; };
-		2866BC6026D921830042A8F0 /* MainHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2866BC5E26D921830042A8F0 /* MainHeaderTableViewCell.xib */; };
 		2866BC6426D92AF10042A8F0 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866BC6326D92AF10042A8F0 /* ReusableIdentifier.swift */; };
 		2866BC6726D92C960042A8F0 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866BC6626D92C960042A8F0 /* Section.swift */; };
 		2866BC6926D92CDB0042A8F0 /* SectionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866BC6826D92CDB0042A8F0 /* SectionOutput.swift */; };
@@ -66,17 +68,19 @@
 		28381ECA26C7069200B10B61 /* BTGPactualMobileChallengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTGPactualMobileChallengerUITests.swift; sourceTree = "<group>"; };
 		28381ECC26C7069200B10B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28381EE126C7087400B10B61 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		28381EE226C7087400B10B61 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		28381EE526C708B300B10B61 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		28381EE926CFDFCD00B10B61 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		28381EEB26CFE04200B10B61 /* MainIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIteractor.swift; sourceTree = "<group>"; };
 		28381EEE26CFE38A00B10B61 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		28381EF026CFEA7400B10B61 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		28381EF326CFEB3400B10B61 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		284EBBDD26DD5011002BB88B /* DropDownComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownComponentView.swift; sourceTree = "<group>"; };
+		284A898B26EF834A00FB88D5 /* TargetContainerComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetContainerComponentView.swift; sourceTree = "<group>"; };
+		284A898D26EF8F6B00FB88D5 /* OrigimContainerComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigimContainerComponentView.swift; sourceTree = "<group>"; };
+		284A898F26EF980D00FB88D5 /* BtgLogoContainerComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtgLogoContainerComponentView.swift; sourceTree = "<group>"; };
+		284C03E126DEC8EB009B6221 /* MainViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerScreen.swift; sourceTree = "<group>"; };
+		284C03E326DECA85009B6221 /* MainViewControllerScreenSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerScreenSpec.swift; sourceTree = "<group>"; };
+		284EBBDD26DD5011002BB88B /* ButtomContainerComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomContainerComponentView.swift; sourceTree = "<group>"; };
 		284EBBDF26DD5249002BB88B /* DropDownComponentViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownComponentViewSpec.swift; sourceTree = "<group>"; };
-		2866BC5D26D921830042A8F0 /* MainHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		2866BC5E26D921830042A8F0 /* MainHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		2866BC6326D92AF10042A8F0 /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		2866BC6626D92C960042A8F0 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		2866BC6826D92CDB0042A8F0 /* SectionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOutput.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		28381EBE26C7069200B10B61 /* BTGPactualMobileChallengerTests */ = {
 			isa = PBXGroup;
 			children = (
+				284C03E326DECA85009B6221 /* MainViewControllerScreenSpec.swift */,
 				284EBBDF26DD5249002BB88B /* DropDownComponentViewSpec.swift */,
 				28381EBF26C7069200B10B61 /* BTGPactualMobileChallengerTests.swift */,
 				28381EC126C7069200B10B61 /* Info.plist */,
@@ -216,11 +221,8 @@
 		28381EDC26C7080E00B10B61 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2866BC5A26D671EF0042A8F0 /* HeaderView */,
-				2866BC5C26D671FE0042A8F0 /* FooterView */,
-				2866BC5B26D671F80042A8F0 /* BodyView */,
 				28381EE126C7087400B10B61 /* MainViewController.swift */,
-				28381EE226C7087400B10B61 /* MainViewController.xib */,
+				284C03E126DEC8EB009B6221 /* MainViewControllerScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,29 +284,6 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		2866BC5A26D671EF0042A8F0 /* HeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				2866BC5D26D921830042A8F0 /* MainHeaderTableViewCell.swift */,
-				2866BC5E26D921830042A8F0 /* MainHeaderTableViewCell.xib */,
-			);
-			path = HeaderView;
-			sourceTree = "<group>";
-		};
-		2866BC5B26D671F80042A8F0 /* BodyView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BodyView;
-			sourceTree = "<group>";
-		};
-		2866BC5C26D671FE0042A8F0 /* FooterView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FooterView;
-			sourceTree = "<group>";
-		};
 		2866BC6126D92AC60042A8F0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,7 +316,10 @@
 		28FACA1326DD25CD0020B7D8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				284EBBDD26DD5011002BB88B /* DropDownComponentView.swift */,
+				284EBBDD26DD5011002BB88B /* ButtomContainerComponentView.swift */,
+				284A898B26EF834A00FB88D5 /* TargetContainerComponentView.swift */,
+				284A898D26EF8F6B00FB88D5 /* OrigimContainerComponentView.swift */,
+				284A898F26EF980D00FB88D5 /* BtgLogoContainerComponentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -483,8 +465,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28381EB526C7069200B10B61 /* LaunchScreen.storyboard in Resources */,
-				2866BC6026D921830042A8F0 /* MainHeaderTableViewCell.xib in Resources */,
-				28381EE426C7087400B10B61 /* MainViewController.xib in Resources */,
 				28381EB226C7069200B10B61 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,20 +611,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				2866BC6926D92CDB0042A8F0 /* SectionOutput.swift in Sources */,
-				284EBBDE26DD5011002BB88B /* DropDownComponentView.swift in Sources */,
+				284EBBDE26DD5011002BB88B /* ButtomContainerComponentView.swift in Sources */,
 				28381EEA26CFDFCD00B10B61 /* MainPresenter.swift in Sources */,
 				28381EE326C7087400B10B61 /* MainViewController.swift in Sources */,
 				28FACA1626DD2C630020B7D8 /* CodeView.swift in Sources */,
+				284A898E26EF8F6B00FB88D5 /* OrigimContainerComponentView.swift in Sources */,
 				28381EEC26CFE04200B10B61 /* MainIteractor.swift in Sources */,
 				28381EE626C708B300B10B61 /* MainRouter.swift in Sources */,
 				28381EA926C7068F00B10B61 /* AppDelegate.swift in Sources */,
 				2866BC6B26D92E710042A8F0 /* SectionInput.swift in Sources */,
-				2866BC5F26D921830042A8F0 /* MainHeaderTableViewCell.swift in Sources */,
 				28381EF126CFEA7400B10B61 /* APIRouter.swift in Sources */,
+				284A898C26EF834A00FB88D5 /* TargetContainerComponentView.swift in Sources */,
 				2866BC6426D92AF10042A8F0 /* ReusableIdentifier.swift in Sources */,
 				28381EEF26CFE38A00B10B61 /* Currency.swift in Sources */,
 				2866BC6726D92C960042A8F0 /* Section.swift in Sources */,
+				284C03E226DEC8EB009B6221 /* MainViewControllerScreen.swift in Sources */,
 				28381EF426CFEB3400B10B61 /* APIService.swift in Sources */,
+				284A899026EF980D00FB88D5 /* BtgLogoContainerComponentView.swift in Sources */,
 				28381EAB26C7068F00B10B61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,6 +638,7 @@
 			files = (
 				284EBBE026DD5249002BB88B /* DropDownComponentViewSpec.swift in Sources */,
 				28381EC026C7069200B10B61 /* BTGPactualMobileChallengerTests.swift in Sources */,
+				284C03E426DECA85009B6221 /* MainViewControllerScreenSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
