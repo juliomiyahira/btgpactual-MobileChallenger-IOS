@@ -65,8 +65,9 @@ extension OrigimContainerComponentView: CodeView {
     }
     
     func setupAdditionalConfiguration() {
-        stackView.backgroundColor = .green
-        textField.backgroundColor = .red
         image.image = UIImage(named: "money-icon")
+        textField.layer.borderColor = UIColor.blue.cgColor
+        textField.layer.borderWidth = 1.0
+        textField.layer.cornerRadius = 5
     }
 }

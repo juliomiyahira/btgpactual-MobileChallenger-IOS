@@ -14,7 +14,6 @@ final class BtgLogoContainerComponentView: UIView {
         view.alignment = .center
         view.axis = .vertical
         view.distribution = .fill
-        view.backgroundColor = .cyan
         return view
     }()
     

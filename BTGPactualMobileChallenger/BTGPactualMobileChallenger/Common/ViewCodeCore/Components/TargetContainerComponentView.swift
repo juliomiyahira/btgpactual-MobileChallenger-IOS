@@ -15,7 +15,6 @@ final class TargetContainerComponentView: UIView {
         view.alignment = .center
         view.distribution = .fill
         view.spacing = 10
-        view.backgroundColor = .blue
         return view
     }()
     
@@ -64,7 +63,8 @@ extension TargetContainerComponentView: CodeView {
     
     func setupAdditionalConfiguration() {
         image.image = UIImage(named: "exchange-icon")
-        image.backgroundColor = .red
-        label.backgroundColor = .green
+        label.layer.borderColor = UIColor.blue.cgColor
+        label.layer.borderWidth = 1.0
+        label.layer.cornerRadius = 5
     }
 }

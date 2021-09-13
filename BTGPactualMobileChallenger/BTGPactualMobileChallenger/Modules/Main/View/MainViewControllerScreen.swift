@@ -24,7 +24,6 @@ class MainViewControllerScreen: UIView {
     
     lazy var contentView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = .green
         return view
     }()
     
