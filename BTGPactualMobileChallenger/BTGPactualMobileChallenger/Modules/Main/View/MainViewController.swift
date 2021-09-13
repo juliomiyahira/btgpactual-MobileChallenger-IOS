@@ -21,7 +21,6 @@ class MainViewController: UIViewController, MainViewProtocol {
         let viewScreen = MainViewControllerScreen()
         viewScreen.delegate = self
         self.view = viewScreen
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     private func getView() -> MainViewControllerScreen {

@@ -47,6 +47,7 @@ extension OrigimContainerComponentView: CodeView {
     }
     
     func setupConstraint() {
+        
         stackView.snp.makeConstraints{make in
             make.width.equalToSuperview()
             make.height.equalTo(100)

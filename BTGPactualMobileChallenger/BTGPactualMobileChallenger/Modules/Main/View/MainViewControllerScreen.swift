@@ -17,13 +17,14 @@ class MainViewControllerScreen: UIView {
     
     var delegate: MainViewControllerScrennDelegate?
     
-    lazy var stackViewContainer: UIStackView = {
-        let view = UIStackView(frame: .zero)
-        view.axis = .vertical
-        view.distribution = .fillProportionally
-        view.backgroundColor = .yellow
-        view.alignment = .center
-        view.spacing = 8
+    lazy var scrollView: UIScrollView = {
+        let view = UIScrollView(frame: .zero)
+        return view
+    }()
+    
+    lazy var contentView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .green
         return view
     }()
     
@@ -41,13 +42,13 @@ class MainViewControllerScreen: UIView {
         let view = TargetContainerComponentView()
         return view
     }()
-    
+
     lazy var buttonContainer : ButtomContainerComponentView = {
         var view = ButtomContainerComponentView()
         view.delegate = self
         return view
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -61,43 +62,55 @@ class MainViewControllerScreen: UIView {
 extension MainViewControllerScreen: CodeView{
   
     func buildViewHierarchy() {
-        addSubview(stackViewContainer)
-        stackViewContainer.addArrangedSubview(logoContainer)
-        stackViewContainer.addArrangedSubview(originContainer)
-        stackViewContainer.addArrangedSubview(targetContainer)
-        stackViewContainer.addArrangedSubview(buttonContainer)
+        contentView.addSubview(logoContainer)
+        contentView.addSubview(originContainer)
+        contentView.addSubview(targetContainer)
+        contentView.addSubview(buttonContainer)
+        addSubview(scrollView)
+        scrollView.addSubview(contentView)
     }
     
     func setupConstraint() {
         
-        stackViewContainer.snp.makeConstraints{make in
-            make.top.equalToSuperview().offset(100)
-            make.bottom.equalToSuperview().inset(50)
-            make.left.right.equalToSuperview()
-        }
-        
         logoContainer.snp.makeConstraints{ make in
-            make.width.equalToSuperview()
-            make.height.equalTo(100)
+            make.top.equalTo(contentView).offset(10)
+            make.width.equalTo(contentView.snp.width)
         }
-        
+
         originContainer.snp.makeConstraints{ make in
-            make.width.equalToSuperview()
-            make.height.equalTo(100)
+            make.top.equalTo(logoContainer).offset(100)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().inset(10)
         }
-        
+
         targetContainer.snp.makeConstraints{ make in
+            make.top.equalTo(originContainer).offset(100)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().inset(10)
+        }
+
+        buttonContainer.snp.makeConstraints{ make in
+            make.bottom.equalToSuperview().inset(70)
             make.width.equalToSuperview()
             make.height.equalTo(100)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().inset(10)
+        }
+
+        contentView.snp.makeConstraints{make in
+            make.top.bottom.equalTo(scrollView)
+            make.left.right.equalTo(self)
+            make.width.equalTo(scrollView)
+            make.height.equalTo(scrollView)
         }
         
-        buttonContainer.snp.makeConstraints{ make in
-            make.width.equalToSuperview()
-            make.height.equalTo(50)
+        scrollView.snp.makeConstraints{make in
+            make.edges.equalTo(self)
         }
     }
     
     func setupAdditionalConfiguration() {
+        super.backgroundColor = .white
         buttonContainer.selectedButtonOne.setTitle("Origem", for: .normal)
         buttonContainer.selectedButtonTwo.setTitle("Destino", for: .normal)
         targetContainer.label.text = "R$ 10,00"

@@ -13,7 +13,7 @@ final class TargetContainerComponentView: UIView {
         let view  = UIStackView(frame: .zero)
         view.axis = .horizontal
         view.alignment = .center
-        view.distribution = .fillProportionally
+        view.distribution = .fill
         view.spacing = 10
         view.backgroundColor = .blue
         return view
@@ -54,9 +54,7 @@ extension TargetContainerComponentView: CodeView {
         }
         
         image.snp.makeConstraints{make in
-            make.left.equalToSuperview().offset(10)
-            make.width.equalTo(50)
-            make.height.equalTo(50)
+            make.width.height.equalTo(50)
         }
         
         label.snp.makeConstraints{make in
@@ -67,7 +65,6 @@ extension TargetContainerComponentView: CodeView {
     func setupAdditionalConfiguration() {
         image.image = UIImage(named: "exchange-icon")
         image.backgroundColor = .red
-        
         label.backgroundColor = .green
     }
 }
