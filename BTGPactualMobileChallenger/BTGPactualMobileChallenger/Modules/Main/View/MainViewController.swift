@@ -17,10 +17,14 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     var presenter: MainPresenterProtocol?
     
+    lazy var screen: MainViewControllerScreen = {
+        let view = MainViewControllerScreen()
+        view.delegate = self
+        return view
+    }()
+    
     override func loadView() {
-        let viewScreen = MainViewControllerScreen()
-        viewScreen.delegate = self
-        self.view = viewScreen
+        self.view = screen
     }
     
     private func getView() -> MainViewControllerScreen {

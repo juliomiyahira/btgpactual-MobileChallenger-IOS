@@ -9,23 +9,16 @@ import UIKit
 
 final class OrigimContainerComponentView: UIView {
     
-    lazy var stackView: UIStackView = {
-        let stackView = UIStackView(frame: .zero)
-        stackView.alignment = .center
-        stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
-        stackView.spacing = 10
-        return stackView
-    }()
-    
     lazy var image: UIImageView = {
         let view = UIImageView(frame: .zero)
         return view
     }()
     
     lazy var textField: UITextField = {
-        let view = UITextField(frame: .zero)
-        return view
+        let textField = UITextField(frame: .zero)
+        textField.placeholder = "Place Holder"
+        textField.delegate = self
+        return textField
     }()
     
     override init(frame: CGRect = .zero) {
@@ -41,18 +34,12 @@ final class OrigimContainerComponentView: UIView {
 extension OrigimContainerComponentView: CodeView {
     
     func buildViewHierarchy() {
-        addSubview(stackView)
-        stackView.addArrangedSubview(image)
-        stackView.addArrangedSubview(textField)
+        addSubview(image)
+        addSubview(textField)
     }
     
     func setupConstraint() {
-        
-        stackView.snp.makeConstraints{make in
-            make.width.equalToSuperview()
-            make.height.equalTo(100)
-        }
-        
+
         image.snp.makeConstraints{make in
             make.width.equalTo(50)
             make.height.equalTo(50)
@@ -60,6 +47,9 @@ extension OrigimContainerComponentView: CodeView {
         }
         
         textField.snp.makeConstraints{make in
+            make.top.equalToSuperview()
+            make.left.equalTo(image.snp.right).offset(10)
+            make.right.equalToSuperview().inset(10)
             make.height.equalTo(50)
         }
     }
@@ -69,5 +59,14 @@ extension OrigimContainerComponentView: CodeView {
         textField.layer.borderColor = UIColor.blue.cgColor
         textField.layer.borderWidth = 1.0
         textField.layer.cornerRadius = 5
+    }
+}
+
+
+extension OrigimContainerComponentView: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
     }
 }

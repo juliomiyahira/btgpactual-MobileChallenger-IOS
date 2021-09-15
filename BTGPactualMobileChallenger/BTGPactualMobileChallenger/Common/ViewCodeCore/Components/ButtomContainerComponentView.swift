@@ -21,7 +21,6 @@ final class ButtomContainerComponentView: UIView {
         let view = UIStackView(frame: .zero)
         view.axis = .horizontal
         view.distribution = .fillEqually
-        view.backgroundColor = .red
         view.spacing = 8
         return view
     }()

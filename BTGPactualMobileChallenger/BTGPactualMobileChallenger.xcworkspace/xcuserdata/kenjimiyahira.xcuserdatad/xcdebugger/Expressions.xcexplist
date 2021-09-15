@@ -10,5 +10,19 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "MainViewController.loadView():MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "getView().originContainer.textField.isUserInteractionEnabled">
+            </PersistentString>
+            <PersistentString
+               value = "getView().isUserInteractionEnabled">
+            </PersistentString>
+            <PersistentString
+               value = "getView().originContainer.isUserInteractionEnabled">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

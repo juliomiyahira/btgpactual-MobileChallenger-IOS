@@ -61,12 +61,12 @@ class MainViewControllerScreen: UIView {
 extension MainViewControllerScreen: CodeView{
   
     func buildViewHierarchy() {
-        contentView.addSubview(logoContainer)
-        contentView.addSubview(originContainer)
-        contentView.addSubview(targetContainer)
-        contentView.addSubview(buttonContainer)
         addSubview(scrollView)
         scrollView.addSubview(contentView)
+        contentView.addSubview(logoContainer)
+        contentView.addSubview(targetContainer)
+        contentView.addSubview(originContainer)
+        contentView.addSubview(buttonContainer)
     }
     
     func setupConstraint() {
@@ -76,33 +76,32 @@ extension MainViewControllerScreen: CodeView{
             make.width.equalTo(contentView.snp.width)
         }
 
-        originContainer.snp.makeConstraints{ make in
+        targetContainer.snp.makeConstraints{ make in
             make.top.equalTo(logoContainer).offset(100)
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().inset(10)
         }
-
-        targetContainer.snp.makeConstraints{ make in
-            make.top.equalTo(originContainer).offset(100)
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().inset(10)
+        
+        originContainer.snp.makeConstraints{ make in
+            make.top.equalTo(targetContainer.snp.bottom).offset(100)
+            make.width.equalToSuperview()
+            make.height.equalTo(100)
         }
 
         buttonContainer.snp.makeConstraints{ make in
             make.bottom.equalToSuperview().inset(70)
-            make.width.equalToSuperview()
             make.height.equalTo(100)
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().inset(10)
         }
-
+        
         contentView.snp.makeConstraints{make in
             make.top.bottom.equalTo(scrollView)
             make.left.right.equalTo(self)
             make.width.equalTo(scrollView)
             make.height.equalTo(scrollView)
         }
-        
+
         scrollView.snp.makeConstraints{make in
             make.edges.equalTo(self)
         }
@@ -113,7 +112,6 @@ extension MainViewControllerScreen: CodeView{
         buttonContainer.selectedButtonOne.setTitle("Origem", for: .normal)
         buttonContainer.selectedButtonTwo.setTitle("Destino", for: .normal)
         targetContainer.label.text = "R$ 10,00"
-        
     }
 }
 
