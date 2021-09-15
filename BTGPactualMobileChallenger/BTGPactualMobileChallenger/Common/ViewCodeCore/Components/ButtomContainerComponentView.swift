@@ -65,6 +65,8 @@ extension ButtomContainerComponentView: CodeView {
     }
     
     func setupAdditionalConfiguration() {
+        selectedButtonOne.backgroundColor = UIColor(hexaRGB: "#001e61")
+        selectedButtonTwo.backgroundColor = UIColor(hexaRGB: "#656166")
     }
 }
 

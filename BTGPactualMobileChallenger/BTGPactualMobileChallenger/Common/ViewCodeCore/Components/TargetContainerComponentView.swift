@@ -14,16 +14,15 @@ final class TargetContainerComponentView: UIView {
         view.axis = .horizontal
         view.alignment = .center
         view.distribution = .fill
-        view.spacing = 10
         return view
     }()
     
-    var image: UIImageView = {
-        let image = UIImageView(frame: .zero)
-        return image
+    var currencyLabel: UILabel = {
+        let view = UILabel(frame: .zero)
+        return view
     }()
     
-    var label: UILabel = {
+    var convertValueLabel: UILabel = {
         let view = UILabel(frame: .zero)
         return view
     }()
@@ -42,8 +41,8 @@ extension TargetContainerComponentView: CodeView {
     
     func buildViewHierarchy() {
         addSubview(stackViewContainer)
-        stackViewContainer.addArrangedSubview(image)
-        stackViewContainer.addArrangedSubview(label)
+        stackViewContainer.addArrangedSubview(currencyLabel)
+        stackViewContainer.addArrangedSubview(convertValueLabel)
     }
     
     func setupConstraint() {
@@ -52,19 +51,23 @@ extension TargetContainerComponentView: CodeView {
             make.height.equalTo(100)
         }
         
-        image.snp.makeConstraints{make in
-            make.width.height.equalTo(50)
+        currencyLabel.snp.makeConstraints{make in
+            make.left.equalToSuperview().inset(40)
+            make.width.equalTo(60)
+            make.height.equalTo(50)
         }
         
-        label.snp.makeConstraints{make in
+        convertValueLabel.snp.makeConstraints{make in
             make.height.equalTo(50)
         }
     }
     
     func setupAdditionalConfiguration() {
-        image.image = UIImage(named: "exchange-icon")
-        label.layer.borderColor = UIColor.blue.cgColor
-        label.layer.borderWidth = 1.0
-        label.layer.cornerRadius = 5
+        currencyLabel.font = currencyLabel.font.withSize(20)
+        currencyLabel.textColor = UIColor(hexaRGB: "#001e61")
+        currencyLabel.textAlignment = .left
+        
+        convertValueLabel.font = convertValueLabel.font.withSize(70)
+        convertValueLabel.textColor = UIColor(hexaRGB: "#001e61")
     }
 }

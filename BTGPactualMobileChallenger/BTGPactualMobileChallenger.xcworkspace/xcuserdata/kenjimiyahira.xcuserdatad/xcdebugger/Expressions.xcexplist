@@ -24,5 +24,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "TargetContainerComponentView.setupAdditionalConfiguration():TargetContainerComponentView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIColor(hex: &quot;#001e61&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

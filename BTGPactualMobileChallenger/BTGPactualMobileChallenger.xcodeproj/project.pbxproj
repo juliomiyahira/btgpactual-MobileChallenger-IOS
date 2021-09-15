@@ -27,6 +27,7 @@
 		284C03E426DECA85009B6221 /* MainViewControllerScreenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C03E326DECA85009B6221 /* MainViewControllerScreenSpec.swift */; };
 		284EBBDE26DD5011002BB88B /* ButtomContainerComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284EBBDD26DD5011002BB88B /* ButtomContainerComponentView.swift */; };
 		284EBBE026DD5249002BB88B /* DropDownComponentViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284EBBDF26DD5249002BB88B /* DropDownComponentViewSpec.swift */; };
+		285392CF26F28C21009FB5CC /* UIColor+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285392CE26F28C21009FB5CC /* UIColor+extensions.swift */; };
 		2866BC6426D92AF10042A8F0 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866BC6326D92AF10042A8F0 /* ReusableIdentifier.swift */; };
 		2866BC6726D92C960042A8F0 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866BC6626D92C960042A8F0 /* Section.swift */; };
 		2866BC6926D92CDB0042A8F0 /* SectionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866BC6826D92CDB0042A8F0 /* SectionOutput.swift */; };
@@ -83,6 +84,7 @@
 		284C03E326DECA85009B6221 /* MainViewControllerScreenSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerScreenSpec.swift; sourceTree = "<group>"; };
 		284EBBDD26DD5011002BB88B /* ButtomContainerComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomContainerComponentView.swift; sourceTree = "<group>"; };
 		284EBBDF26DD5249002BB88B /* DropDownComponentViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownComponentViewSpec.swift; sourceTree = "<group>"; };
+		285392CE26F28C21009FB5CC /* UIColor+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extensions.swift"; sourceTree = "<group>"; };
 		2866BC6326D92AF10042A8F0 /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		2866BC6626D92C960042A8F0 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		2866BC6826D92CDB0042A8F0 /* SectionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOutput.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		28381EA726C7068F00B10B61 /* BTGPactualMobileChallenger */ = {
 			isa = PBXGroup;
 			children = (
+				285392CD26F28C05009FB5CC /* extensions */,
 				2866BC6126D92AC60042A8F0 /* Common */,
 				2866BC5926D590680042A8F0 /* Entity */,
 				28381EE726CFDF0F00B10B61 /* Network */,
@@ -274,6 +277,14 @@
 				28381EF326CFEB3400B10B61 /* APIService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		285392CD26F28C05009FB5CC /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				285392CE26F28C21009FB5CC /* UIColor+extensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		2866BC5926D590680042A8F0 /* Entity */ = {
@@ -617,6 +628,7 @@
 				28FACA1626DD2C630020B7D8 /* CodeView.swift in Sources */,
 				284A898E26EF8F6B00FB88D5 /* OrigimContainerComponentView.swift in Sources */,
 				28381EEC26CFE04200B10B61 /* MainIteractor.swift in Sources */,
+				285392CF26F28C21009FB5CC /* UIColor+extensions.swift in Sources */,
 				28381EE626C708B300B10B61 /* MainRouter.swift in Sources */,
 				28381EA926C7068F00B10B61 /* AppDelegate.swift in Sources */,
 				2866BC6B26D92E710042A8F0 /* SectionInput.swift in Sources */,

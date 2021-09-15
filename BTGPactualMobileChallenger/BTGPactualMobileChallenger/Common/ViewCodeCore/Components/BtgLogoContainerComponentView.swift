@@ -47,7 +47,7 @@ extension BtgLogoContainerComponentView: CodeView {
         
         image.snp.makeConstraints{make in
             make.width.equalTo(320)
-            make.height.equalTo(80)
+            make.height.equalTo(100)
         }
     }
     

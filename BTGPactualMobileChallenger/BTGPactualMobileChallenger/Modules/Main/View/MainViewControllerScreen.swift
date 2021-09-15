@@ -32,13 +32,13 @@ class MainViewControllerScreen: UIView {
         return view
     }()
     
-    lazy var originContainer: OrigimContainerComponentView = {
-        let view = OrigimContainerComponentView()
+    lazy var targetContainer : TargetContainerComponentView = {
+        let view = TargetContainerComponentView()
         return view
     }()
     
-    lazy var targetContainer : TargetContainerComponentView = {
-        let view = TargetContainerComponentView()
+    lazy var originContainer: OrigimContainerComponentView = {
+        let view = OrigimContainerComponentView()
         return view
     }()
 
@@ -72,7 +72,7 @@ extension MainViewControllerScreen: CodeView{
     func setupConstraint() {
         
         logoContainer.snp.makeConstraints{ make in
-            make.top.equalTo(contentView).offset(10)
+            make.top.equalToSuperview().inset(100)
             make.width.equalTo(contentView.snp.width)
         }
 
@@ -83,7 +83,7 @@ extension MainViewControllerScreen: CodeView{
         }
         
         originContainer.snp.makeConstraints{ make in
-            make.top.equalTo(targetContainer.snp.bottom).offset(100)
+            make.top.equalTo(targetContainer.snp.bottom).offset(150)
             make.width.equalToSuperview()
             make.height.equalTo(100)
         }
@@ -111,7 +111,8 @@ extension MainViewControllerScreen: CodeView{
         super.backgroundColor = .white
         buttonContainer.selectedButtonOne.setTitle("Origem", for: .normal)
         buttonContainer.selectedButtonTwo.setTitle("Destino", for: .normal)
-        targetContainer.label.text = "R$ 10,00"
+        targetContainer.currencyLabel.text = "U$"
+        targetContainer.convertValueLabel.text = "10,00"
     }
 }
 
