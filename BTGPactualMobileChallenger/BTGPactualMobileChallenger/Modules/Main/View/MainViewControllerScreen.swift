@@ -31,20 +31,20 @@ class MainViewControllerScreen: UIView {
         let view = BtgLogoContainerComponentView()
         return view
     }()
-    
+
     lazy var targetContainer : TargetContainerComponentView = {
         let view = TargetContainerComponentView()
         return view
     }()
-    
+
     lazy var originContainer: OrigimContainerComponentView = {
         let view = OrigimContainerComponentView()
         return view
     }()
 
-    lazy var buttonContainer : ButtomContainerComponentView = {
-        var view = ButtomContainerComponentView()
-        view.delegate = self
+    lazy var buttonWitchShimmerContainer : ButtonWithShimmerContainerComponent = {
+        var view = ButtonWithShimmerContainerComponent()
+        view.buttonContainer.delegate = self
         return view
     }()
 
@@ -66,7 +66,7 @@ extension MainViewControllerScreen: CodeView{
         contentView.addSubview(logoContainer)
         contentView.addSubview(targetContainer)
         contentView.addSubview(originContainer)
-        contentView.addSubview(buttonContainer)
+        contentView.addSubview(buttonWitchShimmerContainer)
     }
     
     func setupConstraint() {
@@ -81,16 +81,16 @@ extension MainViewControllerScreen: CodeView{
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().inset(10)
         }
-        
+
         originContainer.snp.makeConstraints{ make in
             make.top.equalTo(targetContainer.snp.bottom).offset(150)
             make.width.equalToSuperview()
             make.height.equalTo(100)
         }
-
-        buttonContainer.snp.makeConstraints{ make in
-            make.bottom.equalToSuperview().inset(70)
-            make.height.equalTo(100)
+        
+        buttonWitchShimmerContainer.snp.makeConstraints{ make in
+            make.bottom.equalToSuperview().inset(200)
+            make.height.equalTo(50)
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().inset(10)
         }
@@ -109,10 +109,21 @@ extension MainViewControllerScreen: CodeView{
     
     func setupAdditionalConfiguration() {
         super.backgroundColor = .white
-        buttonContainer.selectedButtonOne.setTitle("Origem", for: .normal)
-        buttonContainer.selectedButtonTwo.setTitle("Destino", for: .normal)
-        targetContainer.currencyLabel.text = "U$"
-        targetContainer.convertValueLabel.text = "10,00"
+        self.buttonWitchShimmerContainer.buttonContainer.selectedButtonOne.setTitle("Origem", for: .normal)
+        self.buttonWitchShimmerContainer.buttonContainer.selectedButtonTwo.setTitle("Destino", for: .normal)
+        self.targetContainer.currencyLabel.text = "U$"
+        self.targetContainer.convertValueLabel.text = "10,00"
+    }
+}
+
+extension MainViewControllerScreen {
+    
+    func showLoading() {
+        self.buttonWitchShimmerContainer.showLoading()
+    }
+    
+    func hideLoading() {
+        self.buttonWitchShimmerContainer.hideLoading()
     }
 }
 

@@ -11,6 +11,8 @@ protocol MainViewProtocol {
     var presenter: MainPresenterProtocol? { get set }
     func update(with currency: Currency)
     func update(with error: String)
+    func showLoading()
+    func stopLoading()
 }
 
 class MainViewController: UIViewController, MainViewProtocol {
@@ -27,8 +29,8 @@ class MainViewController: UIViewController, MainViewProtocol {
         self.view = screen
     }
     
-    private func getView() -> MainViewControllerScreen {
-        return self.view as!MainViewControllerScreen
+    private func getScreen() -> MainViewControllerScreen? {
+        return self.view as? MainViewControllerScreen
     }
     
     override func viewDidLoad() {
@@ -38,20 +40,32 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     func update(with error: String) {
         print(error)
+        stopLoading()
     }
     
     func update(with currency: Currency) {
         print(currency)
+        stopLoading()
     }
 }
 
 extension MainViewController: MainViewControllerScrennDelegate {
+    
+    func showLoading() {
+        self.getScreen()?.showLoading()
+    }
+    
+    func stopLoading() {
+        self.getScreen()?.hideLoading()
+    }
 
     func buttonOneTap() {
-        debugPrint("button one callled")
+//        self.getScreen()?.startButtonShimmer()
+//        debugPrint("button one callled")
     }
     
     func buttonTwoTap() {
-        debugPrint("button two callled")
+//        self.getScreen()?.stopButtonShimmer()
+//        debugPrint("button two callled")
     }
 }

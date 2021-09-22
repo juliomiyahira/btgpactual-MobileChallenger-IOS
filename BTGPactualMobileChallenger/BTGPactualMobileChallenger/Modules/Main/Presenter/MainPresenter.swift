@@ -25,14 +25,27 @@ class MainPresenter: MainPresenterProtocol {
     var view: MainViewProtocol?
 
     func getCurrencies() {
+        self.view?.showLoading()
         self.iteractor?.getCurrencies()
     }
     
     func successGetcurrencies(currency: Currency) {
-        self.view?.update(with: currency)
+        DispatchQueue.main.async {
+            self.view?.stopLoading()
+            self.view?.update(with: currency)
+        }
     }
     
     func errorGetcurrencies(error: Error) {
-        self.view?.update(with: error.localizedDescription)
+        DispatchQueue.main.async {
+            self.view?.stopLoading()
+            self.view?.update(with: error.localizedDescription)
+        }
+    }
+    
+    deinit {
+        self.router = nil
+        self.iteractor = nil
+        self.view = nil
     }
 }

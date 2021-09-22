@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Shimmer
 
 protocol ButtomContainerComponentDelegate {
    func buttonOneTap()
@@ -27,7 +28,7 @@ final class ButtomContainerComponentView: UIView {
     
    public lazy var selectedButtonOne: UIButton = {
         let view = UIButton(frame: .zero)
-        view.backgroundColor = .blue
+        view.backgroundColor = UIColor(hexaRGB: "#001e61")
         view.addTarget(self, action: #selector(buttonTapOne), for: .touchUpInside)
         return view
     }()

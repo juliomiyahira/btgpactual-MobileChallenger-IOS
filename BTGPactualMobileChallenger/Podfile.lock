@@ -12,6 +12,7 @@ PODS:
     - iOSSnapshotTestCase (~> 6.0)
     - Nimble
   - Quick (4.0.0)
+  - Shimmer (1.0.2)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Nimble
   - Nimble-Snapshots
   - Quick
+  - Shimmer (~> 1.0)
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
@@ -28,6 +30,7 @@ SPEC REPOS:
     - Nimble
     - Nimble-Snapshots
     - Quick
+    - Shimmer
     - SnapKit
 
 SPEC CHECKSUMS:
@@ -36,8 +39,9 @@ SPEC CHECKSUMS:
   Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
   Nimble-Snapshots: 881d47f238c5462f38ffcccb1747b17c633b2c18
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 6c243867c2e13f49e93c795a70b1a196b6d7f201
+PODFILE CHECKSUM: 71242ac6b0ae407bc4d3adf93277a21eb55cab92
 
 COCOAPODS: 1.10.1

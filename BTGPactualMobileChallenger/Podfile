@@ -6,6 +6,7 @@ target 'BTGPactualMobileChallenger' do
   use_frameworks!
   pod 'Alamofire', '~> 5.4'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'Shimmer', '~> 1.0'
 
   # Pods for BTGPactualMobileChallenger
 
