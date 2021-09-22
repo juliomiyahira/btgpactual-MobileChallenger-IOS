@@ -89,7 +89,7 @@ extension MainViewControllerScreen: CodeView{
         }
         
         buttonWitchShimmerContainer.snp.makeConstraints{ make in
-            make.bottom.equalToSuperview().inset(200)
+            make.top.equalTo(originContainer.snp.bottom).offset(100)
             make.height.equalTo(50)
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().inset(10)
