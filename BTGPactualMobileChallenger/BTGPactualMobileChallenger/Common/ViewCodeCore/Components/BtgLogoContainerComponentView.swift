@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shimmer
 
 final class BtgLogoContainerComponentView: UIView {
     
@@ -17,8 +18,15 @@ final class BtgLogoContainerComponentView: UIView {
         return view
     }()
     
+    lazy var shimmerContainer: FBShimmeringView = {
+        let view = FBShimmeringView()
+        view.shimmeringSpeed = CGFloat(1000)
+        return view
+    }()
+    
     lazy var image: UIImageView = {
         let image = UIImageView(frame: .zero)
+        image.image = UIImage(named: "btg-logo")
         return image
     }()
     
@@ -36,22 +44,19 @@ extension BtgLogoContainerComponentView: CodeView {
     
     func buildViewHierarchy() {
         addSubview(stackViewContainer)
-        stackViewContainer.addArrangedSubview(image)
+        stackViewContainer.addArrangedSubview(shimmerContainer)
+        shimmerContainer.contentView = image
     }
     
     func setupConstraint() {
         
         stackViewContainer.snp.makeConstraints{make in
             make.width.equalToSuperview()
-        }
-        
-        image.snp.makeConstraints{make in
-            make.width.equalTo(320)
             make.height.equalTo(100)
         }
     }
     
     func setupAdditionalConfiguration() {
-        image.image = UIImage(named: "btg-logo")
+        shimmerContainer.isShimmering = true
     }
 }
